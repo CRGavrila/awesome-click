@@ -1,4 +1,4 @@
-const PARTICLE_COUNT = 1000;
+const PARTICLE_COUNT = 30000;
 
 async function initState() {
     const f32a = new Float32Array(PARTICLE_COUNT * 4);
@@ -8,8 +8,10 @@ async function initState() {
         for(let ptr = 0; ptr < len; ptr +=4) {
             f32a[ptr] = x;
             f32a[ptr + 1] = y;
-            f32a[ptr + 2] = Math.random()*20 - 10;
-            f32a[ptr + 3] = Math.random()*20 - 10;
+            const amplitude = Math.sqrt(Math.random()) * 20;
+            const angle = Math.random() * Math.PI * 2;
+            f32a[ptr + 2] = Math.cos(angle) * amplitude;
+            f32a[ptr + 3] = Math.sin(angle) * amplitude;
         }
     }
 
@@ -36,7 +38,7 @@ async function initView(canvas) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = '#ffffff';
         ctx.save();
-        ctx.translate(canvas.width/2, canvas.height/2);
+        ctx.translate(canvas.width / 2, canvas.height / 2);
         const len = PARTICLE_COUNT * 4;
         for(let ptr = 0; ptr < len; ptr +=4) {
             ctx.fillRect(
