@@ -1,5 +1,5 @@
 {
-  "name": "awesome-click-wasm",
+  "name": "awesome-click",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CRGavrila/awesome-click-wasm.git"
+    "url": "git+https://github.com/CRGavrila/awesome-click.git"
   },
   "keywords": [
     "wasm"
@@ -16,9 +16,9 @@
   "author": "crgavrila",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CRGavrila/awesome-click-wasm/issues"
+    "url": "https://github.com/CRGavrila/awesome-click/issues"
   },
-  "homepage": "https://github.com/CRGavrila/awesome-click-wasm#readme",
+  "homepage": "https://github.com/CRGavrila/awesome-click#readme",
   "devDependencies": {
     "http-server": "^0.11.1"
   }
